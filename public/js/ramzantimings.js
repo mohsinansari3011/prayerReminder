@@ -16,7 +16,7 @@ fetch(`http://api.aladhan.com/v1/timingsByCity?city=${currentcity}&country=Pakis
     })
     .then(function (myJson) {
         //console.log(JSON.stringify(myJson));
-         console.log(myJson);
+        // console.log(myJson);
         // console.log(myJson.data.date.gregorian.weekday.en);
         var cal_today = {
             ramzan: myJson.data.date.hijri.date.substring(0, 2) + ' ' + myJson.data.date.hijri.month.en + ' ' + myJson.data.date.hijri.date.substring(6),
@@ -36,11 +36,29 @@ fetch(`http://api.aladhan.com/v1/timingsByCity?city=${currentcity}&country=Pakis
             isha: myJson.data.timings.Isha,
             }
         
-         console.log(cal_today);
+         //console.log(cal_today);
         // console.log(pray_timing);
 
 
         ramzanCalender.push(cal_today);
         prayersTiming.push(pray_timing);
 
+    });
+
+
+fetch(`http://api.aladhan.com/v1/calendarByCity?city=karachi&country=pakistan&method=2&month=04&year=2019`)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+       //console.log(myJson);
+        arrRamzan = myJson.data;
+        for (let index = 0; index < arrRamzan.length; index++) {
+
+            console.log(arrRamzan[index]);
+            
+          
+           
+       }
+        console.log();
     });
