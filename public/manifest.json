@@ -1,0 +1,13 @@
+{
+    "name": "Ramzan App",
+    "short_name": "Ramzan App",
+    "icons": [{
+      "src": "images/ramzan.ico",
+        "sizes": "128x128",
+        "type": "image/png"
+      }],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#74b9ff",
+    "theme_color": "#e17055"
+  }
