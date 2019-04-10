@@ -267,15 +267,9 @@ userInputEl.addEventListener("keyup",()=>{
 });
 }
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('../service-worker.js')
-             .then(function() { console.log('Service Worker Registered'); });
-}
-
 
 function cityOnload() {
-    
+
     var currentcity = localStorage.getItem("currentcity");
     if (!currentcity) {
         currentcity = "Karachi";
@@ -286,8 +280,16 @@ function cityOnload() {
 
 }
 
-function changecity(e){
+function changecity(e) {
     localStorage.setItem("currentcity", e);
     document.getElementById('currentcity').innerHTML = e + ', Pakistan';
     location.reload();
 }
+
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('../service-worker.js')
+             .then(function() { console.log('Service Worker Registered'); });
+}
+
