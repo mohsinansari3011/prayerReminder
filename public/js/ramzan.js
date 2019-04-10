@@ -4,8 +4,8 @@ var ramzanCalender = JSON.parse(localStorage.getItem("ramzanCalender"));
 var prayersTiming = JSON.parse(localStorage.getItem("prayersTiming"));
 
 
-console.log('ramzanCalender', ramzanCalender);
-console.log('prayersTiming',prayersTiming);
+// console.log('ramzanCalender', ramzanCalender);
+// console.log('prayersTiming',prayersTiming);
 
 // var ramzanCalender = [
    
