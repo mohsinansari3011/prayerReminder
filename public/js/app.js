@@ -50,7 +50,7 @@ function fetchToday(){
                 todayObject = prayersTiming[i];
                 //console.log('todayObject', todayObject);
                 tomorrowObject = prayersTiming[i+1];
-                console.log('tomorrowObject', tomorrowObject);
+                //console.log('tomorrowObject', tomorrowObject);
                 break;
             }
     
@@ -141,8 +141,7 @@ function fetchToday(){
             remainingDayTime = 86400 - todaySeconds;
             
             nextPrayer = 'Fajr';
-            //remainingTime = tomorrowObject.fajar;
-            remainingTime = ishaTime;          
+            remainingTime = tomorrowObject.fajar;
         }
 
         var prayerTime = makePrayerTime(remainingTime);
