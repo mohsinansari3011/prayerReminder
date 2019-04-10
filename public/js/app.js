@@ -67,7 +67,7 @@ function fetchToday(){
             //console.log('ramzanCalender',ramzanCalender);
             for(var i = 0; i < ramzanCalender.length; i++){
 
-                // console.log("ramzanCalender[i].date", ramzanCalender[i].date);
+                 console.log("ramzanCalender[i].date", ramzanCalender[i].date);
                 // console.log("todayDate", todayDate);
                 if(ramzanCalender[i].date.indexOf(todayDate) !== -1){
                     ramzanObject = ramzanCalender[i];
@@ -198,7 +198,7 @@ function fetchcalender(){
     tr = calenderBody.getElementsByTagName('tr');
 
     //if((today.getDate() >= 9 && today.getMonth() === 3) || (today.getDate() <= 31 && today.getMonth() === 4)){
-      if(true){  
+    if (ramzanCalender){  
         for(var i = 0; i < ramzanCalender.length; i++){
             if(ramzanCalender[i].date.indexOf(todayDate) !== -1){
                 index = i;

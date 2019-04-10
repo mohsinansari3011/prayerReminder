@@ -86,5 +86,7 @@ fetch(`http://api.aladhan.com/v1/calendarByCity?city=karachi&country=pakistan&me
             
            
        }
-        console.log(ramzanCalender);
+        localStorage.setItem("ramzanCalender", JSON.stringify(ramzanCalender));
+        localStorage.setItem("prayersTiming", JSON.stringify(prayersTiming));
+        //console.log(ramzanCalender);
     });
