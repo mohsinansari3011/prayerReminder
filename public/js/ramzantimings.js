@@ -1,15 +1,15 @@
 
-var ramzanCalender = [];
-var prayersTiming = [];
+let ramzanCalender = [];
+let prayersTiming = [];
 
-var currentcity = localStorage.getItem("currentcity");
+let currentcity = localStorage.getItem("currentcity");
 if (!currentcity){
     currentcity = "Karachi";
     localStorage.setItem("currentcity", currentcity);
     
 }
 
-console.log(currentcity);
+//console.log(currentcity);
 // fetch(`http://api.aladhan.com/v1/timingsByCity?city=${currentcity}&country=Pakistan&method=8`)
 //     .then(function (response) {
 //         return response.json();
@@ -57,7 +57,7 @@ fetch(`http://api.aladhan.com/v1/calendarByCity?city=${currentcity}&country=paki
 
             //console.log(arrRamzan[index]);
             
-            var cal_today = {
+            let cal_today = {
                 ramzan: arrRamzan[index].date.hijri.date.substring(0, 2) + ' ' + arrRamzan[index].date.hijri.month.en + ' ' + arrRamzan[index].date.hijri.date.substring(6),
                 date: arrRamzan[index].date.gregorian.date.substring(0, 2) + ' ' + arrRamzan[index].date.gregorian.month.en + ' ' + arrRamzan[index].date.gregorian.date.substring(6),
                 day: arrRamzan[index].date.gregorian.weekday.en,
@@ -65,7 +65,7 @@ fetch(`http://api.aladhan.com/v1/calendarByCity?city=${currentcity}&country=paki
                 aftari: arrRamzan[index].timings.Maghrib,
             }
 
-            var pray_timing = {
+            let pray_timing = {
 
                 date: arrRamzan[index].date.gregorian.date.substring(0, 2) + ' ' + arrRamzan[index].date.gregorian.month.en + ' ' + arrRamzan[index].date.gregorian.date.substring(6),
                 fajar: arrRamzan[index].timings.Fajr,
