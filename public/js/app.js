@@ -245,19 +245,26 @@ userInputEl.addEventListener("keyup",()=>{
     tr = calenderBody.getElementsByTagName('tr');
     
     for(var i=0; i<ramzanCalender.length; i++){
-        if(userInput === ramzanCalender[i].ramzan){ 
-            index = i;
-            break;
+
+        if (ramzanCalender[i].ramzan.indexOf(userInput) !== -1) {
+            tr[i].style.display = 'table-row';
+            continue;
+        }else{
+            tr[i].style.display = 'none';
         }
+        // if(userInput === ramzanCalender[i].ramzan){ 
+        //     index = i;
+        //     break;
+        // }
     }
     
-    for(var i=0 ; i<tr.length; i++){
-        if(i === index){
-            tr[i].style.display = 'table-row';            
-            continue;
-        }
-        tr[i].style.display = 'none';
-    }
+    // for(var i=0 ; i<tr.length; i++){
+    //     if(i === index){
+    //         tr[i].style.display = 'table-row';            
+    //         continue;
+    //     }
+    //     tr[i].style.display = 'none';
+    // }
     if(userInput === ''){
         for(var i=0 ; i<tr.length; i++){
             tr[i].style.display = 'table-row';
@@ -280,9 +287,13 @@ function cityOnload() {
 }
 
 function changecity(e) {
-    localStorage.setItem("currentcity", e);
-    document.getElementById('currentcity').innerHTML = e + ', Pakistan';
-    location.reload();
+
+    if (e !== "select") {
+        localStorage.setItem("currentcity", e);
+        document.getElementById('currentcity').innerHTML = e + ', Pakistan';
+        location.reload();
+    }
+   
 }
 
 
