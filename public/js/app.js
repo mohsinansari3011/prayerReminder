@@ -62,7 +62,7 @@ function fetchToday(){
         //     isRamzan = true;
         // }
     
-      
+        let ramzanObject;
         if (ramzanCalender){
             //console.log('ramzanCalender',ramzanCalender);
             for(var i = 0; i < ramzanCalender.length; i++){
@@ -173,7 +173,12 @@ function makeTime(seconds){
     var TimeArr = (seconds).toString().split('.');
     var hours = parseInt(TimeArr[0]);
     var minutes = parseFloat('.' + TimeArr[1]);
-    console.log(hours, Math.round(minutes * 60));
+
+    //console.log(hours, Math.round(minutes * 60));
+
+    if (hours == "0" && Math.round(minutes * 60) == "31") {
+        console.log('alert;');
+    }
     return hours + ' <small>hr</small> ' + Math.round(minutes*60) + ' <small>min</small>';
 }
 
