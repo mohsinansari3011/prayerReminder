@@ -158,8 +158,6 @@ function fetchToday(){
         remainingTime = makeTime(remainingTime);
         prayerNameEl.innerText = nextPrayer;
         remainingTimeEl.innerHTML = remainingTime;
-         
-        console.log(remainingTime);
     },1000);
 }
 
@@ -179,6 +177,7 @@ function makeTime(seconds){
     if (hours == "0" && Math.round(minutes * 60) == "31") {
         console.log('alert;');
     }
+
     return hours + ' <small>hr</small> ' + Math.round(minutes*60) + ' <small>min</small>';
 }
 
