@@ -265,6 +265,8 @@ userInputEl.addEventListener("keyup",()=>{
     //     }
     //     tr[i].style.display = 'none';
     // }
+
+    
     if(userInput === ''){
         for(var i=0 ; i<tr.length; i++){
             tr[i].style.display = 'table-row';
