@@ -168,24 +168,24 @@ function fetchToday(){
 function makeTime(seconds){
     //console.log(seconds);
     seconds = ((seconds/60)/60);
-    var TimeArr = (seconds).toString().split('.');
-    var hours = parseInt(TimeArr[0]);
-    var minutes = parseFloat('.' + TimeArr[1]);
+    let TimeArr = (seconds).toString().split('.');
+    let hours = parseInt(TimeArr[0]);
+    let minutes = parseFloat('.' + TimeArr[1]);
+    let min = Math.round(minutes * 60);
+    //console.log(hours, min);
 
-    //console.log(hours, Math.round(minutes * 60));
-
-    if (hours == "0" && Math.round(minutes * 60) == "0") {
+    if (hours == "0" && min == "0") {
         console.log('alert;');
     }
 
-    return hours + ' <small>hr</small> ' + Math.round(minutes*60) + ' <small>min</small>';
+    return hours + ' <small>hr</small> ' + min + ' <small>min</small>';
 }
 
 // Calculate seconds of prayers time
 function makePrayerTime(prayerTime){
     prayerTime = (prayerTime.toString()).split(":")
-    var firstPart = parseInt(prayerTime[0]);
-    var secondPart = parseInt(prayerTime[1]);
+    let firstPart = parseInt(prayerTime[0]);
+    let secondPart = parseInt(prayerTime[1]);
     return (firstPart*3600) + (secondPart*60);
 }
 
