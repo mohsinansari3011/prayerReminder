@@ -46,7 +46,7 @@ console.log(currentcity);
 //     });
 
 
-fetch(`http://api.aladhan.com/v1/calendarByCity?city=karachi&country=pakistan&method=2&month=04&year=2019`)
+fetch(`http://api.aladhan.com/v1/calendarByCity?city=${currentcity}&country=pakistan&method=2&month=04&year=2019`)
     .then(function (response) {
         return response.json();
     })
