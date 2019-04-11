@@ -174,7 +174,7 @@ function makeTime(seconds){
 
     //console.log(hours, Math.round(minutes * 60));
 
-    if (hours == "0" && Math.round(minutes * 60) == "31") {
+    if (hours == "0" && Math.round(minutes * 60) == "0") {
         console.log('alert;');
     }
 
