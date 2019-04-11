@@ -76,17 +76,21 @@ function fetchToday(){
             }
             
             //console.log(ramzanObject.sehri);
-            bottomBarEl.innerHTML = `
+
+            if (ramzanObject) {
+                bottomBarEl.innerHTML = `
                 <div class="text-left inner-div">SEHR ${ramzanObject.sehri}</div>
                 <div class="text-right inner-div">IFTAR ${ramzanObject.aftari}</div>
             `;
-            todayTableEl.innerHTML = `
+                todayTableEl.innerHTML = `
                 <tr>
                     <td>${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}</td>
                     <td class="text-center">${ramzanObject.ramzan}</td>
                     <td>${days[today.getDay()]}</td>
                 </tr>
             `;
+            }
+            
     
         }
         else{
@@ -169,6 +173,7 @@ function makeTime(seconds){
     var TimeArr = (seconds).toString().split('.');
     var hours = parseInt(TimeArr[0]);
     var minutes = parseFloat('.' + TimeArr[1]);
+    console.log(hours, Math.round(minutes * 60));
     return hours + ' <small>hr</small> ' + Math.round(minutes*60) + ' <small>min</small>';
 }
 
