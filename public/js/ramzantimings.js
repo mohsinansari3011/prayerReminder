@@ -46,7 +46,7 @@ if (!currentcity){
 //     });
 
 
-fetch(`http://api.aladhan.com/v1/calendarByCity?city=${currentcity}&country=pakistan&method=2&month=04&year=2019`)
+fetch(`https://api.aladhan.com/v1/calendarByCity?city=${currentcity}&country=pakistan&method=2&month=04&year=2019`)
     .then(function (response) {
         return response.json();
     })
