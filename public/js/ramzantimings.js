@@ -10,7 +10,7 @@ if (!currentcity){
 }
 
 //console.log(currentcity);
-// fetch(`http://api.aladhan.com/v1/timingsByCity?city=${currentcity}&country=Pakistan&method=8`)
+// fetch(`https://api.aladhan.com/v1/timingsByCity?city=${currentcity}&country=Pakistan&method=8`)
 //     .then(function (response) {
 //         return response.json();
 //     })
