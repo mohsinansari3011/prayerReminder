@@ -1,6 +1,6 @@
 var calenderBody = document.getElementById("calenderBody");
 var todayTableEl = document.getElementById("today");
-
+let currentcityEl = document.getElementById('currentcity');
 
 
 
@@ -294,7 +294,7 @@ function cityOnload() {
         localStorage.setItem("currentcity", currentcity);
 
     }
-    document.getElementById('currentcity').innerHTML = currentcity + ', Pakistan';
+    currentcityEl.innerHTML = currentcity + ', Pakistan';
 
 }
 
@@ -302,7 +302,7 @@ function changecity(e) {
 
     if (e !== "select") {
         localStorage.setItem("currentcity", e);
-        document.getElementById('currentcity').innerHTML = e + ', Pakistan';
+        currentcityEl.innerHTML = e + ', Pakistan';
         location.reload();
     }
    
