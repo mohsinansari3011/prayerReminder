@@ -64,7 +64,7 @@ function fetchToday(){
     
         let ramzanObject;
         if (ramzanCalender){
-            console.log('ramzanCalender',ramzanCalender);
+            //console.log('ramzanCalender',ramzanCalender);
             for(var i = 0; i < ramzanCalender.length; i++){
 
                 // console.log("ramzanCalender[i].date", ramzanCalender[i].date);
