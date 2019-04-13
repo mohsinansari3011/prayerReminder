@@ -191,7 +191,7 @@ function makePrayerTime(prayerTime){
 
 function fetchcalender(){
     var today = new Date();
-    var todayDate = `${today.getDate()} ${months[today.getMonth()]} 2018`;
+    var todayDate = `${today.getDate()} ${months[today.getMonth()]} ${today.getFullYear()}`;
     var index =0;
     var tr;
     for (var  i = 0; i < ramzanCalender.length; i++){
