@@ -13,9 +13,9 @@ let remainingTimeEl = document.getElementById("remaining-time");
 let nextPrayer;
 let remainingTime;
 
-var bottomBarEl = document.getElementById("bottom-bar");
-var isRamzan = false;
-var isDayPassed = false;
+let bottomBarEl = document.getElementById("bottom-bar");
+let isRamzan = false;
+let isDayPassed = false;
 
 
 var brand = document.getElementById("brand");
