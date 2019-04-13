@@ -10,8 +10,8 @@ let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturda
 let prayerNameEl = document.getElementById("prayer-name");
 let remainingTimeEl = document.getElementById("remaining-time");
 
-var nextPrayer;
-var remainingTime;
+let nextPrayer;
+let remainingTime;
 
 var bottomBarEl = document.getElementById("bottom-bar");
 var isRamzan = false;
