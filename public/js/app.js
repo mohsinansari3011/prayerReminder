@@ -1,5 +1,5 @@
-var calenderBody = document.getElementById("calenderBody");
-var todayTableEl = document.getElementById("today");
+let calenderBody = document.getElementById("calenderBody");
+let todayTableEl = document.getElementById("today");
 let currentcityEl = document.getElementById('currentcity');
 
 
