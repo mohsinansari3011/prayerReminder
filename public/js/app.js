@@ -7,8 +7,8 @@ let currentcityEl = document.getElementById('currentcity');
 let months = ['January','Febuary','March','April','May','June','July','August','September','October','November','December'];
 let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
-var prayerNameEl = document.getElementById("prayer-name");
-var remainingTimeEl = document.getElementById("remaining-time");
+let prayerNameEl = document.getElementById("prayer-name");
+let remainingTimeEl = document.getElementById("remaining-time");
 
 var nextPrayer;
 var remainingTime;
