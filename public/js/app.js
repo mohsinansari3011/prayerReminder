@@ -18,11 +18,11 @@ let isRamzan = false;
 let isDayPassed = false;
 
 
-var brand = document.getElementById("brand");
-var searchImg = document.getElementById("search-img");
-var closeBtn = document.getElementById("close-btn");
-var userInputEl = document.getElementById("user-input");
-var inputGroup = document.querySelector('.input-group');
+let brand = document.getElementById("brand");
+let searchImg = document.getElementById("search-img");
+let closeBtn = document.getElementById("close-btn");
+let userInputEl = document.getElementById("user-input");
+let inputGroup = document.querySelector('.input-group');
 
 
 
