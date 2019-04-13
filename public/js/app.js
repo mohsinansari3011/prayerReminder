@@ -33,7 +33,7 @@ let inputGroup = document.querySelector('.input-group');
 function fetchToday(){
 
 
-    var int = setInterval(()=>{
+    let int = setInterval(()=>{
         
         cityOnload();
 
